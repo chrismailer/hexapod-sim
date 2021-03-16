@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<robot name="hexapod">
+<robot name="hexapod_detailed">
 
   <!-- COLOURS -->
   <material name="body">
@@ -25,14 +25,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/base_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/base_mesh.STL" />
       </geometry>
       <material name="body" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/base_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/base_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -46,14 +46,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
       <material name="coxa" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -75,14 +75,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
       <material name="femur" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -104,14 +104,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
       <material name="tibia" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -133,14 +133,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
       <material name="coxa" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -162,14 +162,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
       <material name="femur" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -191,14 +191,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
       <material name="tibia" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -220,14 +220,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
       <material name="coxa" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -249,14 +249,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
       <material name="femur" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -278,14 +278,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
       <material name="tibia" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -307,14 +307,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
       <material name="coxa" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -336,14 +336,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
       <material name="femur" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -365,14 +365,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
       <material name="tibia" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -394,14 +394,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
       <material name="coxa" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -423,14 +423,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
       <material name="femur" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -452,14 +452,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
       <material name="tibia" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -481,14 +481,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
       <material name="coxa" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/coxa_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/coxa_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -510,14 +510,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
       <material name="femur" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/femur_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/femur_mesh.STL" />
       </geometry>
     </collision>
   </link>
@@ -539,14 +539,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
       <material name="tibia" />
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://urdf/meshes/tibia_mesh.STL" />
+        <mesh filename="package://urdf/meshes/detailed/tibia_mesh.STL" />
       </geometry>
     </collision>
   </link>
