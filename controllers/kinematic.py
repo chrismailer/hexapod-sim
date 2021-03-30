@@ -47,7 +47,7 @@ class Controller:
 
 		params = np.array(params).reshape(6, 5)
 
-		# Get trajectory for each leg
+		# Generate trajectories for each leg
 		for leg_index in range(6):
 			foot_positions, foot_velocities = self.__leg_traj(leg_index, params[leg_index])
 			joint_angles, joint_speeds = self.__inverse_kinematics(foot_positions, foot_velocities)
@@ -55,7 +55,7 @@ class Controller:
 			achieved_positions = self.forward_kinematics(joint_angles)
 			valid = np.all(np.isclose(foot_positions, achieved_positions))
 			if not valid:
-				raise RuntimeError("Desired foot trajectory not achieveable")
+				raise RuntimeError('Desired foot trajectory not achieveable')
 
 			self.positions = np.append(self.positions, foot_positions, axis=0)
 			self.velocities = np.append(self.velocities, foot_velocities, axis=0)
@@ -77,7 +77,6 @@ class Controller:
 	def __leg_traj(self, leg_index, leg_params):
 		leg_angle = (np.pi / 3.0) * (leg_index)
 		radius, offset, step_height, phase, duty_factor = leg_params
-
 		stride = self.velocity * duty_factor * self.period
 
 		# key points in path
@@ -188,24 +187,24 @@ class Controller:
 		return joint_angles, joint_speeds
 
 
-	def __joint_velocities(self, foot_speed, joint_angles):
-		l_1, l_2, l_3 = self.l_1, self.l_2, self.l_3
+	# def __joint_velocities(self, foot_speed, joint_angles):
+	# 	l_1, l_2, l_3 = self.l_1, self.l_2, self.l_3
 
-		dx, dy, dz = foot_speed
-		theta_1, theta_2, theta_3 = joint_angles
+	# 	dx, dy, dz = foot_speed
+	# 	theta_1, theta_2, theta_3 = joint_angles
 
-		c_1, s_1 = np.cos(theta_1), np.sin(theta_1)
-		c_2, s_2 = np.cos(theta_2), np.sin(theta_2)
-		c_3, s_3 = np.cos(theta_3), np.sin(theta_3)
-		c_23 = np.cos(theta_2 + theta_3)
+	# 	c_1, s_1 = np.cos(theta_1), np.sin(theta_1)
+	# 	c_2, s_2 = np.cos(theta_2), np.sin(theta_2)
+	# 	c_3, s_3 = np.cos(theta_3), np.sin(theta_3)
+	# 	c_23 = np.cos(theta_2 + theta_3)
 
-		theta_dot_1 = (dy*c_1 - dx*s_1) / (l_1 + l_3*c_23 + l_2*c_2)
-		theta_dot_2 = (1/l_2)*(dz*c_2 - dx*c_1*s_2 - dy*s_1*s_2 + (c_3 / s_3)*(dz*s_2 + dx*c_1*c_2 + dy*c_2*s_1))
-		theta_dot_3 = -(1/l_2)*(dz*c_2 - dx*c_1*s_2 - dy*s_1*s_2 + ((l_2 + l_3*c_3)/(l_3*s_3))*(dz*s_2 + dx*c_1*c_2 + dy*c_2*s_1))
+	# 	theta_dot_1 = (dy*c_1 - dx*s_1) / (l_1 + l_3*c_23 + l_2*c_2)
+	# 	theta_dot_2 = (1/l_2)*(dz*c_2 - dx*c_1*s_2 - dy*s_1*s_2 + (c_3 / s_3)*(dz*s_2 + dx*c_1*c_2 + dy*c_2*s_1))
+	# 	theta_dot_3 = -(1/l_2)*(dz*c_2 - dx*c_1*s_2 - dy*s_1*s_2 + ((l_2 + l_3*c_3)/(l_3*s_3))*(dz*s_2 + dx*c_1*c_2 + dy*c_2*s_1))
 
-		joint_speeds = np.array([theta_dot_1, theta_dot_2, theta_dot_3])
+	# 	joint_speeds = np.array([theta_dot_1, theta_dot_2, theta_dot_3])
 
-		return joint_speeds
+	# 	return joint_speeds
 
 
 	def forward_kinematics(self, joint_angles):
@@ -218,6 +217,10 @@ class Controller:
 		z = l_3 * np.sin(theta_2 + theta_3) + l_2 * np.sin(theta_2)
 
 		return np.array([x, y, z])
+
+
+	def IMU_feedback(self, measured_attitude):
+		return
 
 
 # reshapes a 32 length array of floats range 0.0 - 1.0 into the range expected by the controller
