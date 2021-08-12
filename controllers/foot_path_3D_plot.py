@@ -20,12 +20,12 @@ fig.set_size_inches(w=4.7747, h=3.5)
 
 ax = fig.add_subplot(111, projection='3d')
 
-controller = Controller(tripod_gait, body_height=0.14, velocity=0.15, period=0.5, crab_angle=0)
+controller = Controller(tripod_gait, body_height=0.14, velocity=0.15, period=0.25, crab_angle=0)
 joint_angles = controller.angles[(leg_n-1)*3:leg_n*3,:] # leg 3
 x, y, z = controller.forward_kinematics(joint_angles) * 1000
 
-ax.scatter(x[:60], y[:60], z[:60], label="Swing phase")
-ax.scatter(x[60:], y[60:], z[60:], label="Support phase")
+ax.scatter(x[:30], y[:30], z[:30], label="Support phase")
+ax.scatter(x[30:], y[30:], z[30:], label="Swing phase")
 
 ax.set_title("Foot trajectory")
 ax.set_xlabel('$X (mm)$')
